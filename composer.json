@@ -1,0 +1,18 @@
+{
+    "name": "jsanc623/LaravelControllerGenerator",
+    "description": "A controller and route generator for Laravel.",
+    "homepage": "https://github.com/jsanc623/LaravelControllerGenerator",
+    "license": "MIT",
+    "keywords": ["controller", "route", "generator"],
+    "version": "0.1.0",
+    "authors": [
+        {
+            "name": "Juan Sanchez",
+            "email": "juan.sanchez@juanleonardosanchez.com",
+            "homepage": "http://juanleonardosanchez.com"
+        }
+    ],
+    "autoload": {
+        "files": ["lib/password.php"]
+    }
+}
