@@ -8,11 +8,12 @@
         [method-input-fields]
 
 --Example--
-get users::UsersController
-    create::{public}
+users::UsersController
+    get base
+    post create::{}
         username
         password
-    update::{private, static}
+    post update::{private, static}
         username
 
 --Example Output--
