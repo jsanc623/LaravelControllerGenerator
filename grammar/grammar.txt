@@ -1,0 +1,52 @@
+--Builtins--
+    DOUBLE-COLON = "::"
+    SINGLE-SPACE = " "
+
+--Grammar--
+[route-endpoint][DOUBLE-COLON][controller-class-name]
+    [route-method][SINGLE-SPACE][method-name][DOUBLE-COLON]{[method-visibility],[method-static]}
+        [method-input-fields]
+
+--Example--
+get users::UsersController
+    create::{public}
+        username
+        password
+    update::{private, static}
+        username
+
+--Example Output--
+
+./app/controllers/UsersController.php
+<?php
+
+/**
+ * Class UsersController
+ */
+class UsersController extends \BaseController {
+
+    public function __construct(){
+
+    }
+
+    public function base(){
+
+    }
+
+    public function create(){
+        $username = Input::get("username");
+        $password = Input::get("password");
+    }
+
+    private static function update(){
+        $username = Input::get("username");
+    }
+}
+
+./app/routes.php
+<?php
+
+# UsersController Routes
+Route::get('/',                 "UsersController@base");
+Route::post('/users/create',    "UsersController@create");
+Route::post('/users/update',    "UsersController@update");
