@@ -1,13 +1,13 @@
-password_compat
+LaravelControllerGenerator
 ===============
 
-This library is intended to provide forward compatibility with the password_* functions being worked on for PHP 5.5.
+This library is intended to provide a method to generate matching routes and controllers for Laravel 4.
 
 
 Requirements
 ============
 
-This library requires `PHP >= 5.3.7`
+This library requires `PHP >= 5.3`
 
 Installation
 ============
