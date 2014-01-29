@@ -1,0 +1,7 @@
+users::UsersController
+    get base
+    post create::{}
+        username
+        password
+    post update::{private, static}
+        username

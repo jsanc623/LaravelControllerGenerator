@@ -7,6 +7,11 @@
     [route-method][SINGLE-SPACE][method-name][DOUBLE-COLON]{[method-visibility],[method-static]}
         [method-input-fields]
 
+--Token Grammar--
+[T_ROUTEENDPOINT][T_DOUBLECOLON][T_CONTROLLERCLASSNAME]
+    [T_ROUTEMETHOD][T_SINGLESPACE][T_METHODNAME][T_DOUBLECOLON][T_BLOCKSTART][T_METHODVISIBILITY][T_COMMASEPARATOR][T_METHODSTATIC][T_BLOCKEND]
+        [T_METHODINPUTFIELDS]
+
 --Example--
 users::UsersController
     get base
